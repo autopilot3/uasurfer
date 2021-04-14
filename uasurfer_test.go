@@ -481,6 +481,13 @@ var testUAVars = []struct {
 			DeviceComputer,
 		},
 	},
+	{"HubSpot Crawler",
+		UserAgent{
+			Browser{BrowserBot, Version{}},
+			OS{},
+			DeviceComputer,
+		},
+	},
 
 	// Unknown or partially handled
 	{"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.1b3pre) Gecko/20090223 SeaMonkey/2.0a3", //Seamonkey (~FF)
