@@ -188,6 +188,9 @@ notwebkit:
 	case strings.Contains(ua, "websitemetadataretriever"):
 		u.Browser.ID = BrowserBot
 
+	case strings.Contains(ua, "crawler"):
+		u.Browser.ID = BrowserBot
+
 	case strings.Contains(ua, "sitescorebot"):
 		u.Browser.ID = BrowserBot
 
