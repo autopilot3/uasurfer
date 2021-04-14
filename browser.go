@@ -179,6 +179,12 @@ notwebkit:
 	case strings.Contains(ua, "lua-resty-http"):
 		u.Browser.ID = BrowserBot
 
+	case strings.Contains(ua, "go-http-client"):
+		u.Browser.ID = BrowserBot
+
+	case strings.Contains(ua, "python-requests"):
+		u.Browser.ID = BrowserBot
+
 	case strings.Contains(ua, "slack-imgproxy"):
 		u.Browser.ID = BrowserBot
 
