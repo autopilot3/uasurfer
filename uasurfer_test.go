@@ -453,6 +453,34 @@ var testUAVars = []struct {
 			DeviceComputer,
 		},
 	},
+	{"Slack-ImgProxy (+https://api.slack.com/robots)",
+		UserAgent{
+			Browser{BrowserBot, Version{}},
+			OS{},
+			DeviceComputer,
+		},
+	},
+	{"willnorris/imageproxy",
+		UserAgent{
+			Browser{BrowserBot, Version{}},
+			OS{},
+			DeviceComputer,
+		},
+	},
+	{"Asana/1.4.0 WebsiteMetadataRetriever",
+		UserAgent{
+			Browser{BrowserBot, Version{}},
+			OS{},
+			DeviceComputer,
+		},
+	},
+	{"SiteScoreBot",
+		UserAgent{
+			Browser{BrowserBot, Version{}},
+			OS{},
+			DeviceComputer,
+		},
+	},
 
 	// Unknown or partially handled
 	{"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.1b3pre) Gecko/20090223 SeaMonkey/2.0a3", //Seamonkey (~FF)

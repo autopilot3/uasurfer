@@ -179,6 +179,18 @@ notwebkit:
 	case strings.Contains(ua, "lua-resty-http"):
 		u.Browser.ID = BrowserBot
 
+	case strings.Contains(ua, "slack-imgproxy"):
+		u.Browser.ID = BrowserBot
+
+	case strings.Contains(ua, "willnorris/imageproxy"):
+		u.Browser.ID = BrowserBot
+
+	case strings.Contains(ua, "websitemetadataretriever"):
+		u.Browser.ID = BrowserBot
+
+	case strings.Contains(ua, "sitescorebot"):
+		u.Browser.ID = BrowserBot
+
 	case strings.Contains(ua, "ms-office"):
 		u.Browser.ID = BrowserMSOutlook
 
