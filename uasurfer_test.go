@@ -728,6 +728,10 @@ var testUAVars = []struct {
 		UserAgent{
 			Browser{BrowserSafari, Version{4, 0, 4}}, OS{PlatformiPad, OSiOS, Version{3, 2, 0}}, DeviceTablet}},
 
+	{"Mozilla/5.0 (iPhone; CPU iPhone OS 15_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Mobile/15E148 Safari/604.1",
+		UserAgent{
+			Browser{BrowserSafari, Version{15, 3, 0}}, OS{PlatformiPhone, OSiOS, Version{15, 3, 1}}, DevicePhone}},
+
 	{"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7",
 		UserAgent{
 			Browser{BrowserSafari, Version{4, 0, 5}}, OS{PlatformiPhone, OSiOS, Version{4, 0, 0}}, DevicePhone}},
