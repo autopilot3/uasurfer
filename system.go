@@ -235,7 +235,7 @@ func (u *UserAgent) evalMacintosh(uaPlatformGroup string) {
 	u.OS.Platform = PlatformMac
 	if i := strings.Index(uaPlatformGroup, "os x 10"); i != -1 {
 		u.OS.Name = OSMacOSX
-		u.OS.Version.parse(uaPlatformGroup[i+5:])
+		u.OS.Version.Parse(uaPlatformGroup[i+5:])
 
 		return
 	}
@@ -244,7 +244,7 @@ func (u *UserAgent) evalMacintosh(uaPlatformGroup string) {
 
 func (v *Version) findVersionNumber(s string, m string) bool {
 	if ind := strings.Index(s, m); ind != -1 {
-		return v.parse(s[ind+len(m):])
+		return v.Parse(s[ind+len(m):])
 	}
 	return false
 }
@@ -253,16 +253,16 @@ func (v *Version) findVersionNumber(s string, m string) bool {
 // a Version.
 func (o *OS) getiOSVersion(uaPlatformGroup string) {
 	if i := strings.Index(uaPlatformGroup, "cpu iphone os "); i != -1 {
-		o.Version.parse(uaPlatformGroup[i+14:])
+		o.Version.Parse(uaPlatformGroup[i+14:])
 		return
 	}
 
 	if i := strings.Index(uaPlatformGroup, "cpu os "); i != -1 {
-		o.Version.parse(uaPlatformGroup[i+7:])
+		o.Version.Parse(uaPlatformGroup[i+7:])
 		return
 	}
 
-	o.Version.parse(uaPlatformGroup)
+	o.Version.Parse(uaPlatformGroup)
 }
 
 // strToInt simply accepts a string and returns a `int`,
@@ -274,7 +274,7 @@ func strToInt(str string) int {
 
 // strToVer accepts a string and returns a Version,
 // with {0, 0, 0} being default.
-func (v *Version) parse(str string) bool {
+func (v *Version) Parse(str string) bool {
 	if len(str) == 0 || str[0] < '0' || str[0] > '9' {
 		return false
 	}
